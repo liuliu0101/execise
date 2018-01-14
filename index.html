@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>express</title>
+</head>
+<body>
+	<div id="root">aj</div>
+	<script src="../js/jquery-1.12.3.min.js"></script>
+	<script>
+		// $.get('http://localhost:3000/hello',function(data){
+		// 	console.log(data);
+		// 	document.getElementById('root').innerHTML= data.name;
+		// })
+		$.ajax({
+			type:'get',
+			url:'http://localhost:3000/jsonp',
+			dataType:'jsonp',
+			success:function(data){
+				console.log(data);
+			}
+		})
+	</script>
+</body>
+</html>
